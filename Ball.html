@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+           * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d7d7d7;
+            height: 0vh;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            animation: backgroud-change 10s infinite;
+        }
+        .ball {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border: 1px dashed black;
+            border-radius: 50%;
+            box-shadow: 0 0 5px black;
+            z-index: 4;
+            overflow: hidden;
+        }
+        .scene-1 .ball {
+            left: 0%;
+            bottom: -725px;
+            animation: shot 10s linear infinite;
+        }
+        @keyframes shot{
+            0%{left: 0%; bottom: -725px;}
+            19% { left: 24.9%; bottom: -46px; background-color: #d7d7d7; transform: scale(1, 1); } 
+            20% { left: 25%; bottom: -45px; background-color: rgb(0, 255, 47); transform: scale(1.2, 0.8); } 
+            21% { left: 25.1%; bottom: -46px; background-color: #d7d7d7; transform: scale(1.2, 0.8); } 
+            30%{left: 45%; bottom: -362px; transform: scale(1.5, 0.8); transform: rotate(360deg); }
+            39%{left: 59.9%; bottom: -704px; background-color: #d7d7d7; transform: scale(1.1);}
+            40%{left: 60%; bottom: -705px; background-color: red; transform: scale(1.2,0.8);}
+            41%{left: 60.1%;bottom: -704px;background-color:#d7d7d7 ; transform: scale(1.1);}
+            59%{left: 69.9%; bottom: -46px; background-color: #d7d7d7; transform: scale(1.1);}
+            60%{left: 70%; bottom: -45px;background-color: blue;transform: scale(1.2,0.8);}
+            61%{left: 70.1%;bottom: -46px; background-color: #d7d7d7; transform: scale(1.1);}
+            70%{left: 83%; bottom: -161px;}
+            79%{left: 95.9%; bottom: -361px; background-color: #d7d7d7; transform: scale(1.1);}
+            80%{left: 96%; bottom: -362px;background-color: yellow; transform: scale(1.2,0.8);}
+            81%{left: 95.9%; bottom: -363px; background-color: #d7d7d7;transform: scale(1.1);} 
+            99%{left: 74.9%; bottom: -704px; background-color: #d7d7d7; transform: scale(1.1);}
+            100%{left: 75%; bottom: -705px; background-color: rgb(0, 0, 0); transform: scale(1.2,0.8);}
+        }
+        @keyframes backgroud-change{
+            19%{background-color: #d7d7d7;}
+            20%{background-color: rgb(140, 255, 140);}
+            39%{background-color: #d7d7d7;}
+            40%{background-color: rgb(252, 139, 139);}
+            59%{background-color: #d7d7d7;}
+            60%{background-color: rgb(122, 122, 255);}
+            79%{background-color: #d7d7d7;}
+            80%{background-color: rgb(253, 253, 126);}
+            90%{background-color: black;}
+            100%{background-color: black;}
+        }
+
+    </style>
+</head>
+<body>
+
+  <div class="scene scene-1 ">
+    <div class="ball"></div>
+  </div>  
+  <div>
+    <h1 style="color: #d7d7d7;">Заслужив 12?</h1>
+  </div>
+
+</body>
+</html>
